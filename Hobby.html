@@ -1,0 +1,292 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hobby</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Background Video */
+#bgVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter: brightness(0.30) blur(2px);
+}
+
+/* Floating particles */
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: float 10s linear infinite;
+  z-index: 1;
+}
+@keyframes float {
+  0% {transform: translateY(0) scale(1); opacity: 0.8;}
+  50% {opacity: 1; transform: translateY(-100vh) scale(1.2);}
+  100% {opacity: 0; transform: translateY(-120vh) scale(0.8);}
+}
+
+/* Navigation */
+nav {
+  margin-top: 25px;
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+  animation: fadeInDown 1.5s ease-in-out;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 15px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+  font-weight: 500;
+}
+nav a:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Header */
+h1 {
+  margin-top: 80px;
+  font-size: 3rem;
+  font-weight: 700;
+  animation: fadeIn 2s ease;
+}
+
+/* Hobby Container */
+.hobby-container {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  padding-bottom: 60px;
+}
+
+.hobby-card {
+  width: 260px;
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+  backdrop-filter: blur(3px);
+}
+
+.hobby-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hobby-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.hobby-card:hover img {
+  transform: scale(1.12);
+  filter: brightness(1.2);
+}
+
+/* Hover text */
+.hobby-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 0px;
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  opacity: 0;
+  transform: translateY(20%);
+  transition: 0.5s ease;
+}
+
+.hobby-card:hover .hobby-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hobby-text b {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+/* Smooth Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fadeInDown {
+  from {opacity: 0; transform: translateY(-40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Footer */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  opacity: 0.9;
+  padding: 50px 0;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+/* Floating Music Button */
+#musicBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  backdrop-filter: blur(6px);
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 9999;
+}
+#musicBtn:hover {
+  transform: scale(1.15);
+}
+#musicIcon {
+  font-size: 30px;
+  color: #fff;
+  user-select: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Video -->
+<video autoplay muted loop id="bgVideo">
+  <source src="Background1.mp4" type="video/mp4">
+</video>
+
+<!-- Floating particles -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const numParticles = 25;
+  for (let i = 0; i < numParticles; i++) {
+    const particle = document.createElement("div");
+    particle.classList.add("particle");
+    particle.style.left = Math.random() * 100 + "vw";
+    particle.style.animationDuration = 8 + Math.random() * 5 + "s";
+    particle.style.animationDelay = Math.random() * 5 + "s";
+    particle.style.background = Math.random() > 0.5 ? "rgba(255,255,255,0.7)" : "rgba(0,255,255,0.6)";
+    document.body.appendChild(particle);
+  }
+});
+</script>
+
+<!-- Navigation -->
+<nav>
+  <a href="Try7.html">Home</a>
+  <a href="Aboutme5.html">About Me</a>
+  <a href="Family2.html">Family</a>
+  <a href="Hobby.html">Hobby</a>
+  <a href="Contact.html">Contact</a>
+</nav>
+
+<h1>My Activity Hub</h1>
+
+<div class="hobby-container">
+
+  <div class="hobby-card">
+    <img src="Coding.jpg" alt="Coding">
+    <div class="hobby-text"><b>Coding</b><br>I love creating websites & systems.</div>
+  </div>
+
+  <div class="hobby-card">
+    <img src="Running.jpg" alt="Running">
+    <div class="hobby-text"><b>Running</b><br>Running helps me stay healthy & focused.</div>
+  </div>
+
+  <div class="hobby-card">
+    <img src="Gaming.jpg" alt="Gaming">
+    <div class="hobby-text"><b>Gaming</b><br>Gaming relaxes my mind after long days sometimes.</div>
+  </div>
+
+  <div class="hobby-card">
+    <img src="Hotwheels.jpg" alt="Music">
+    <div class="hobby-text"><b>Collecting Hotwheels</b><br>I enjoy collecting unique and rare Hotwheels models.</div>
+  </div>
+
+</div>
+
+<footer>© 2025 Hazwan Ramidi | Designed by ZWANZZ</footer>
+
+<!-- 🎵 Background Music -->
+<audio id="bgMusic" loop>
+  <source src="Music.mp3" type="audio/mp3">
+</audio>
+
+<!-- 🎵 Floating Music Button -->
+<div id="musicBtn">
+  <i id="musicIcon">▶️</i>
+</div>
+
+<script>
+// Smooth stagger animation
+window.addEventListener('load', () => {
+  const cards = document.querySelectorAll('.hobby-card');
+  cards.forEach((card, index) => {
+    setTimeout(() => { card.classList.add('visible'); }, 300 * (index + 1));
+  });
+});
+
+// Music Play/Pause Button
+const btn = document.getElementById("musicBtn");
+const icon = document.getElementById("musicIcon");
+const music = document.getElementById("bgMusic");
+
+btn.addEventListener("click", () => {
+  if (music.paused) {
+    music.play();
+    icon.textContent = "⏸️"; 
+  } else {
+    music.pause();
+    icon.textContent = "▶️"; 
+  }
+});
+</script>
+
+</body>
+</html>

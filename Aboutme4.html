@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Hazwan | My Journey</title>
+  <style>
+      body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #a8dadc, #457b9d);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+      	    scroll-behavior: smooth;
+    }
+
+   /* Navigation bar */
+        nav {
+            margin-top: 40px; /* lowered nav bar */
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 0 8px;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+    .container {
+      max-width: 1000px;
+      margin: 10px auto 60px auto; /* adjusted for lower nav */
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 42px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      color: #fff;
+      animation: fadeInDown 1.2s ease;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.7;
+      color: #f5f5f5;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    h3 {
+      color: #2c2c2c;
+      font-size: 24px;
+      margin-top: 10px;
+      background: rgba(255, 255, 255, 0.4);
+      display: inline-block;
+      padding: 10px 25px;
+      border-radius: 20px;
+    }
+
+    /* Scroll section animations */
+    .section {
+      margin: 60px 0;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 1s ease;
+    }
+    .section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section img {
+      width: 70%;
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s ease;
+    }
+    .section img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Skills section */
+    .skill {
+      margin: 20px 0;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .skill-label {
+      font-weight: 600;
+      color: #113859;
+      margin-bottom: 5px;
+    }
+    .progress-bar {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 30px;
+      overflow: hidden;
+      height: 18px;
+    }
+    .progress {
+      background: #113859;
+      height: 100%;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 18px;
+      color: #fff;
+      border-radius: 30px;
+      animation: fillBar 2s ease;
+    }
+    @keyframes fillBar {
+      from { width: 0; }
+      to { width: var(--progress); }
+    }
+
+    /* Experience cards */
+    .experience-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .exp-card {
+      background: rgba(255, 255, 255, 0.3);
+      color: #222;
+      padding: 25px;
+      border-radius: 25px;
+      width: 280px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(6px);
+    }
+    .exp-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    }
+    .exp-card h4 {
+      color: #113859;
+      margin-bottom: 8px;
+    }
+    .exp-card p {
+      color: #333;
+      font-size: 0.95em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      color: white;
+      margin-top: 50px;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="Home4.html">Home</a>
+    <a href="Aboutme4.html">About Me</a>
+    <a href="Family1.html">Family</a>
+    <a href="#">Collection</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- About Me Container -->
+  <div class="container">
+    <h1>Who I Am?</h1>
+    <p>Welcome to my personal space — here’s a closer look at who I am, my passions, and my journey so far.</p>
+
+    <div class="section">
+      <h3>My Story So Far</h3>
+      <img src="Profile Picture.jpg" alt="My background">
+      <p>Hi, I’m Hazwan — a Diploma in Information Management student at UiTM. 
+      I’m passionate about technology, archives, and creative design. 
+      My journey is about exploring how tech can simplify and inspire life.</p>
+    </div>
+
+    <div class="section">
+      <h3>The Soundtrack of My Life</h3>
+      <img src="your-music-photo.jpg" alt="Favourite music">
+      <p>Music keeps me motivated. I love calm and lo-fi beats while coding, 
+      and energetic music for my daily runs and creative work.</p>
+    </div>
+
+    <div class="section">
+      <h3>My Learning Journey</h3>
+      <img src="your-education-photo.jpg" alt="Education">
+      <p>I’m pursuing a Diploma in Information Management at UiTM, 
+      where I’ve learned about information systems, records management, and web technologies.</p>
+    </div>
+
+    <div class="section">
+      <h3>What I Do Best</h3>
+      <div class="skill">
+        <div class="skill-label">HTML & CSS</div>
+        <div class="progress-bar"><div class="progress" style="--progress: 90%; width: 90%;">90%</div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-label">PHP & MySQL</div>
+        <div class="progress-bar"><div class="progress" style="--progress: 80%; width: 80%;">80%</div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-label">Records & Archives</div>
+        <div class="progress-bar"><div class="progress" style="--progress: 85%; width: 85%;">85%</div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-label">Communication</div>
+        <div class="progress-bar"><div class="progress" style="--progress: 75%; width: 75%;">75%</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Experience</h3>
+      <div class="experience-container">
+        <div class="exp-card">
+          <h4>Library Intern — Pustaka Negeri Sarawak</h4>
+          <p>Worked on cataloguing, community outreach, and digitising records.  
+          (Internship: June 2025 — Aug 2025)</p>
+        </div>
+        <div class="exp-card">
+          <h4>Web Project — Online PC Store</h4>
+          <p>Developed a PHP/MySQL CRUD web app to manage inventory and orders efficiently.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Beyond the Books</h3>
+      <img src="your-hobby-photo.jpg" alt="Hobbies">
+      <p>I enjoy gaming, running, coding, and exploring creative designs — activities that keep my mind active and inspired.</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Hazwan Ramidi | Designed by ZWANZZ
+  </footer>
+
+  <script>
+    // Scroll reveal animation
+    const sections = document.querySelectorAll('.section');
+    function showOnScroll() {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const boxTop = sec.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) sec.classList.add('show');
+        else sec.classList.remove('show');
+      });
+    }
+    window.addEventListener('scroll', showOnScroll);
+    showOnScroll();
+  </script>
+
+</body>
+</html>

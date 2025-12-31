@@ -1,0 +1,323 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #00b4d8, #0077b6, #03045e);
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+  overflow-x: hidden;
+}
+/* Floating particles */
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: float 10s linear infinite;
+  z-index: 1;
+}
+@keyframes float {
+  0% {transform: translateY(0) scale(1); opacity: 0.8;}
+  50% {opacity: 1; transform: translateY(-100vh) scale(1.2);}
+  100% {opacity: 0; transform: translateY(-120vh) scale(0.8);}
+}
+/* Navigation */
+nav {
+  margin-top: 25px;
+  border-radius: 25px;
+  display: inline-block;
+  padding: 12px 25px;
+  animation: fadeInDown 1.5s ease-in-out;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 15px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+  font-weight: 500;
+}
+nav a:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Container */
+.container {
+  margin-top: 70px;
+  animation: softSlide 2s ease-in-out;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  animation: smoothFadeUp 1.8s ease-in-out;
+}
+p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Family Members */
+.member {
+  display: inline-block;
+  margin: 30px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-in-out;
+}
+.member.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.member:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+.member img {
+  border-radius: 20px;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  transition: all 0.5s ease;
+}
+.member:hover img {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+/* Popup Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  animation: fadeOverlay 0.5s ease forwards;
+}
+.modal-content {
+  background: #f1faee;
+  color: #000;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 10% auto;
+  width: 80%;
+  max-width: 500px;
+  animation: scaleFade 0.6s ease-in-out forwards;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+.modal-content h2 {
+  margin-top: 0;
+  color: #1d3557;
+}
+.close {
+  color: #333;
+  float: right;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.close:hover {
+  color: #e63946;
+  transform: rotate(90deg);
+}
+
+/* Fade-out animation */
+.fadeOutModal {
+  animation: fadeOutModal 0.5s ease forwards;
+}
+.fadeOutContent {
+  animation: fadeOutContent 0.4s ease forwards;
+}
+
+/* Footer */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  opacity: 0.9;
+  padding: 50px 0;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fadeInDown {
+  from {opacity: 0; transform: translateY(-40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes softSlide {
+  0% {opacity: 0; transform: translateY(40px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+@keyframes smoothFadeUp {
+  0% {opacity: 0; transform: translateY(25px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeOverlay {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes scaleFade {
+  from {opacity: 0; transform: scale(0.8);}
+  to {opacity: 1; transform: scale(1);}
+}
+@keyframes fadeOutModal {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+@keyframes fadeOutContent {
+  from {opacity: 1; transform: scale(1);}
+  to {opacity: 0; transform: scale(0.8);}
+}
+</style>
+</head>
+<body>
+
+<!-- Floating particles -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const numParticles = 25;
+  for (let i = 0; i < numParticles; i++) {
+    const particle = document.createElement("div");
+    particle.classList.add("particle");
+    particle.style.left = Math.random() * 100 + "vw";
+    particle.style.animationDuration = 8 + Math.random() * 5 + "s";
+    particle.style.animationDelay = Math.random() * 5 + "s";
+    particle.style.background = Math.random() > 0.5 ? "rgba(255,255,255,0.7)" : "rgba(0,255,255,0.6)";
+    document.body.appendChild(particle);
+  }
+});
+</script>
+
+<nav>
+  <a href="Try7.html">Home</a>
+  <a href="Aboutme5.html">About Me</a>
+  <a href="Family2.html">Family</a>
+  <a href="Hobby.html">Hobby</a>
+  <a href="Contact.html">Contact</a>
+</nav>
+
+<div class="container">
+  <h1>My Loved Ones</h1>
+  <p>
+    Family means everything to me. They are my biggest source of strength, love, and motivation. 
+    Here’s a glimpse of the wonderful people who make my world brighter every day.
+<br> 👇🏼Please click the image to view more details.
+  </p>
+
+  <div class="member">
+    <img src="Father.jpg" alt="Father" onclick="openModal('fatherModal')">
+    <p><b>Father</b><br>Kind, patient, and hardworking.</p>
+  </div>
+
+  <div class="member">
+    <img src="MOther.jpg" alt="Mother" onclick="openModal('motherModal')">
+    <p><b>Mother</b><br>Supportive and caring, always be my inspiration.</p>
+  </div>
+
+  <div class="member">
+    <img src="Brother.jpg" alt="Younger Brother" onclick="openModal('siblingsModal')">
+    <p><b>Younger Brother</b><br>Fun-loving and always there for me.</p>
+  </div>
+</div>
+
+<!-- Father Modal -->
+<div id="fatherModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('fatherModal')">&times;</span>
+    <h2>My Father</h2>
+    <p>My father is the pillar of our family. He works tirelessly to provide for us and always encourages me to pursue my dreams. His wisdom and patience inspire me every day to become a better person.</p>
+  </div>
+</div>
+
+<!-- Mother Modal -->
+<div id="motherModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('motherModal')">&times;</span>
+    <h2>My Mother</h2>
+    <p>My mother is my biggest supporter. She has a heart full of love and always knows how to make everyone feel special. Her kindness, care, and delicious cooking make home the best place to be.</p>
+  </div>
+</div>
+
+<!-- Siblings Modal -->
+<div id="siblingsModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('siblingsModal')">&times;</span>
+    <h2>My Siblings</h2>
+    <p>My younger brother is my best friend and partner in fun and my playful rival. We share laughter, secrets, and even small fights but at the end of the day, we always have each other’s back.</p>
+
+  </div>
+</div>
+
+<footer>© 2025 Hazwan Ramidi | Designed by ZWANZZ</footer>
+
+<script>
+// Smooth staggered appearance for members
+window.addEventListener('load', () => {
+  const members = document.querySelectorAll('.member');
+  members.forEach((member, index) => {
+    setTimeout(() => {
+      member.classList.add('visible');
+    }, 500 * (index + 1));
+  });
+});
+
+// Modal functions with fade-out
+function openModal(id) {
+  const modal = document.getElementById(id);
+  modal.style.display = "block";
+  modal.classList.remove("fadeOutModal");
+}
+
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  const content = modal.querySelector(".modal-content");
+  content.classList.add("fadeOutContent");
+  modal.classList.add("fadeOutModal");
+
+  setTimeout(() => {
+    modal.style.display = "none";
+    modal.classList.remove("fadeOutModal");
+    content.classList.remove("fadeOutContent");
+  }, 500);
+}
+
+window.onclick = function(event) {
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => {
+    if (event.target == modal) {
+      closeModal(modal.id);
+    }
+  });
+}
+</script>
+
+</body>
+</html>

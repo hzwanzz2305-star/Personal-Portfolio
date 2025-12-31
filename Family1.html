@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family | Hazwan's Space</title>
+  <style>
+    body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #a8dadc, #457b9d);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+      	    scroll-behavior: smooth;
+    }
+
+    /* Navigation bar */
+        nav {
+            margin-top: 40px; /* lowered nav bar */
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 0 8px;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+    /* Main content */
+    .container {
+      padding-top: -150px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 100px;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    /* Family section */
+    .family-members {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 50px;
+      gap: 40px;
+    }
+
+    .member {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.4s ease;
+      animation: slideUp 1.5s ease-in-out;
+    }
+
+    .member:hover {
+      transform: scale(1.05);
+    }
+
+    .member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid white;
+    }
+
+    footer {
+      margin-top: 80px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      padding-bottom: 30px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(60px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="Home4.html">Home</a>
+    <a href="Aboutme4.html">About Me</a>
+    <a href="Family1.html">Family</a>
+    <a href="collection.html">Collection</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h1>My Family</h1>
+    <p>
+      Family means everything to me. They are my biggest source of strength, love, and motivation. 
+      Here’s a glimpse of the wonderful people who make my world brighter every day.
+    </p>
+
+    <div class="family-members">
+      <div class="member">
+        <img src="images/father.jpg" alt="Father">
+        <h3>My Father</h3>
+        <p>A strong and hardworking man who always inspires me to do my best.</p>
+      </div>
+
+      <div class="member">
+        <img src="images/mother.jpg" alt="Mother">
+        <h3>My Mother</h3>
+        <p>The heart of the family — caring, loving, and my greatest supporter.</p>
+      </div>
+
+      <div class="member">
+        <img src="images/sibling.jpg" alt="Sibling">
+        <h3>My Brother</h3>
+        <p>My partner in crime and best friend — always full of energy and ideas!</p>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 Hazwan Ramidi | Designed by ZWANZZ
+    </footer>
+  </div>
+</body>
+</html>

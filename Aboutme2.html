@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me — Your Name</title>
+  <style>
+    :root{
+      --accent:#6C63FF;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f4f6fb;
+      --glass: rgba(255,255,255,0.6);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#f8f9ff 0%,var(--bg) 100%);color:#111;}
+    .container{max-width:980px;margin:36px auto;padding:20px}
+
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{flex:0 0 140px;height:140px;border-radius:18px;overflow:hidden;box-shadow:0 6px 18px rgba(20,20,50,0.08);}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .hero{background:var(--glass);backdrop-filter:blur(6px);padding:18px;border-radius:14px;display:flex;gap:20px;align-items:center}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(20,20,50,0.04)}
+
+    /* Main column */
+    .about-me h2{margin-top:0}
+    .about-me p{color:#333;line-height:1.6}
+
+    .skills{display:grid;gap:10px;margin-top:12px}
+    .skill{display:flex;justify-content:space-between;align-items:center}
+    .skill .bar{background:#eef2ff;border-radius:999px;height:10px;width:100%;margin-left:12px;overflow:hidden}
+    .skill .bar > i{display:block;height:100%;background:var(--accent);border-radius:999px}
+
+    .sidebar .meta{display:flex;flex-direction:column;gap:10px}
+    .meta .item{display:flex;justify-content:space-between;color:var(--muted)}
+
+    .experience{display:grid;gap:12px}
+    .exp-item{border-left:3px solid var(--accent);padding:10px 14px;border-radius:8px;background:linear-gradient(180deg,rgba(108,99,255,0.03),transparent)}
+    .exp-item h3{margin:0;font-size:1rem}
+    .exp-item p{margin:6px 0 0;color:var(--muted);font-size:0.95rem}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    /* responsive */
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr;}
+      .avatar{flex:0 0 110px;height:110px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header / Hero -->
+    <div class="hero">
+      <div class="avatar">
+        <!-- Replace 'profile.jpg' with your own picture file name or an online URL -->
+        <img src="profile.jpg" alt="Your Name">
+      </div>
+      <div style="flex:1">
+        <h1>Your Name</h1>
+        <p class="lead">Diploma in Information Management student • Aspiring Information Professional • Enthusiast of libraries, records, and small web projects</p>
+        <p style="margin-top:10px;color:var(--muted);font-size:0.95rem">Location: Kuching, Malaysia • Email: youremail@example.com</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- Main column -->
+      <main class="card about-me">
+        <h2>About Me</h2>
+        <p>I am a dedicated Diploma of Information Management student at UiTM with a deep interest in records management, archives, and applying simple web technologies to build useful tools. I enjoy blending library science principles with practical tech — building small PHP/MySQL apps, creating clear documentation, and improving how people find information.</p>
+
+        <h2 style="margin-top:18px">Skills</h2>
+        <div class="skills">
+          <div class="skill">
+            <strong>HTML &amp; CSS</strong>
+            <div class="bar" style="width:55%"><i style="width:90%"></i></div>
+          </div>
+          <div class="skill">
+            <strong>PHP &amp; MySQL</strong>
+            <div class="bar" style="width:55%"><i style="width:70%"></i></div>
+          </div>
+          <div class="skill">
+            <strong>Records &amp; Archives</strong>
+            <div class="bar" style="width:55%"><i style="width:85%"></i></div>
+          </div>
+          <div class="skill">
+            <strong>Communication</strong>
+            <div class="bar" style="width:55%"><i style="width:80%"></i></div>
+          </div>
+        </div>
+
+        <h2 style="margin-top:18px">Experience</h2>
+        <div class="experience">
+          <div class="exp-item">
+            <h3>Library Intern — Pustaka Negeri Sarawak</h3>
+            <p>Worked on cataloguing, community outreach projects, and digitising selected records. (Internship period: June 2025 — Aug 2025)</p>
+          </div>
+
+          <div class="exp-item">
+            <h3>Web Project — Online PC Store (Student Project)</h3>
+            <p>Built a small PHP/MySQL CRUD application for inventory and order management as part of coursework.</p>
+          </div>
+        </div>
+
+        <h2 style="margin-top:18px">Education</h2>
+        <p><strong>Diploma in Information Management</strong><br>Universiti Teknologi MARA (UiTM) — In progress</p>
+
+        <h2 style="margin-top:18px">Hobbies</h2>
+        <p>Running, reading about archives & cultural heritage, small web experiments, and promoting STEM outreach activities.</p>
+
+        <h2 style="margin-top:18px">Contact</h2>
+        <p>If you'd like to collaborate, invite me for outreach, or view my projects, email me at <a href="mailto:youremail@example.com">youremail@example.com</a>.</p>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="sidebar card">
+        <div class="meta">
+          <div class="item"><strong>Availability</strong><span style="color:green">Open to internships</span></div>
+          <div class="item"><strong>Languages</strong><span>English, Bahasa Melayu</span></div>
+          <div class="item"><strong>Phone</strong><span>+60 12-345 6789</span></div>
+        </div>
+
+        <hr style="margin:14px 0;border:none;border-top:1px solid #eef2ff">
+
+        <h3 style="margin:0 0 10px 0">Connect</h3>
+        <!-- Simple social links with inline SVG icons -->
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="#" title="LinkedIn" style="text-decoration:none;font-size:0.95rem"> 
+            <!-- LinkedIn icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#eef2ff"></rect><path d="M6 9H9V20H6zM7.5 5.5a1.75 1.75 0 110 3.5 1.75 1.75 0 010-3.5zM12 9h2.67v1.52h.04c.37-.7 1.28-1.52 2.63-1.52C20.36 9 22 11 22 14.47V20h-3v-5.06c0-1.21-.02-2.77-1.69-2.77-1.69 0-1.95 1.32-1.95 2.68V20h-3z" fill="#6C63FF"/></svg>
+            <span style="margin-left:6px;color:var(--muted)">LinkedIn</span>
+          </a>
+
+          <a href="#" title="GitHub" style="text-decoration:none;font-size:0.95rem">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#eef2ff"></rect><path d="M12 .5C5.73.5.8 5.43.8 11.7c0 4.9 3.16 9.06 7.55 10.53.55.1.75-.24.75-.54v-1.9c-3.07.66-3.7-1.36-3.7-1.36-.5-1.27-1.22-1.6-1.22-1.6-.99-.68.08-.67.08-.67 1.1.08 1.68 1.12 1.68 1.12.97 1.67 2.54 1.19 3.16.91.1-.71.38-1.19.69-1.46-2.45-.28-5.02-1.23-5.02-5.48 0-1.21.43-2.2 1.12-2.98-.11-.28-.49-1.41.11-2.94 0 0 .92-.29 3.03 1.12a10.5 10.5 0 012.76-.37c.94 0 1.89.13 2.76.37 2.1-1.41 3.02-1.12 3.02-1.12.6 1.53.22 2.66.11 2.94.7.78 1.12 1.77 1.12 2.98 0 4.26-2.58 5.2-5.04 5.47.39.33.73.99.73 2v2.97c0 .31.2.65.76.54C19 20.76 22.2 16.6 22.2 11.7 22.2 5.43 17.27.5 12 .5z" fill="#6C63FF" /></svg>
+            <span style="margin-left:6px;color:var(--muted)">GitHub</span>
+          </a>
+        </div>
+
+        <hr style="margin:14px 0;border:none;border-top:1px solid #eef2ff">
+
+        <h3 style="margin:0 0 10px 0">Quick Links</h3>
+        <ul style="padding-left:18px;margin:0;color:var(--muted)">
+          <li><a href="#projects" style="color:var(--muted)">Projects</a></li>
+          <li><a href="#certs" style="color:var(--muted)">Certificates</a></li>
+          <li><a href="#cv" style="color:var(--muted)">Download CV</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer class="card">
+      <small>Made with ❤️ • Last updated: Oct 29, 2025</small>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazwan's Space</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #a8dadc, #457b9d);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Navigation bar */
+        nav {
+            margin-top: 40px; /* lowered nav bar */
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 0 8px;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        /* Center content */
+        .center-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            animation: slideIn 1.5s ease;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 400;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease;
+        }
+
+        p {
+            font-size: 1em;
+            max-width: 600px;
+            margin: 0 auto 25px;
+            line-height: 1.6;
+            color: #f0f0f0;
+            animation: fadeIn 2s ease;
+        }
+
+        .button {
+            background-color: #f9c80e;
+            color: black;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            animation: fadeInUp 2s ease;
+        }
+
+        .button:hover {
+            background-color: #ffde73;
+            transform: scale(1.05);
+        }
+
+        footer {
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.8);
+            animation: fadeIn 2.5s ease;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes fadeInDown {
+            from {opacity: 0; transform: translateY(-30px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes fadeInUp {
+            from {opacity: 0; transform: translateY(30px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes slideIn {
+            from {opacity: 0; transform: scale(0.8);}
+            to {opacity: 1; transform: scale(1);}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav>
+        <a href="Home4.html">Home</a>
+        <a href="Aboutme4.html">About Me</a>
+        <a href="Family1.html">Family</a>
+        <a href="collection.html">Collection</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Centered main content -->
+    <div class="center-content">
+        <h1>HAZWAN'S SPACE</h1>
+        <h2>Student | Gamer | Tech Enthusiast | Runner</h2>
+        <p>Welcome to my personal website! I’m a Diploma in Information Management student who loves technology, design, and web development. 
+           This website showcases my projects, achievements, and creative work as I continue learning and growing in the tech field.</p>
+        <a href="collection.html" class="button">View My Collection</a>
+    </div>
+
+    <footer>
+        © 2025 Hazwan Ramidi | Designed by ZWANZZ
+    </footer>
+
+</body>
+</html>

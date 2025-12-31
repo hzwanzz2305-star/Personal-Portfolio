@@ -1,0 +1,442 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            background-color: #f9f6f0;
+            color: #333;
+        }
+
+        header {
+            background-image: url('hehe.jpg');
+            color: white;
+            text-align: center;
+	    text-shadow: 2px 2px 5px black;
+            padding: 70px 20px;
+        }
+
+        header h1 {
+            font-size: 50px;
+            letter-spacing: 4px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 20px;
+            color: #000000;
+        }
+
+        nav {
+          background-color: #dff8df;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        section {
+            padding: 40px 60px;
+        }
+
+        h2 {
+            color: #000000;
+            border-bottom: 2px solid #000000;
+            display: inline-block;
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+      .about img {
+   width: 450px;
+height: 300px;/
+    border-radius: 5px;
+    object-fit: cover;
+    border: 4px solid #e68a00;
+        }
+
+        .info {
+            max-width: 60%;
+        }
+
+        .info p {
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+.favorites {
+  background-color: #dff8df;
+  padding: 50px;
+  text-align: center;
+}
+
+.favorites h2 {
+  color: #1a3a1a;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+
+.fav-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+
+.fav-column {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.fav-column h3 {
+  color: #1a3a1a;
+  margin-bottom: 15px;
+}
+
+
+.fav-item {
+  margin-bottom: 20px;
+}
+
+.fav-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.fav-item p {
+  font-size: 14px;
+  color: #333;
+  margin-top: 8px;
+}
+
+/* Responsive for phone screens */
+@media (max-width: 768px) {
+  .fav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fav-column {
+    width: 90%;
+  }
+}
+        .education-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+	    justify-content: center;
+            margin-top: 20px;
+        }
+
+        .edu-photo {
+            background: white;
+            border: 2px solid #e68a00;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            width: 280px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .edu-photo img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .edu-photo p {
+            padding: 10px;
+        }
+
+        /* Skills Section */
+        .skills .box {
+            background: white;
+            border: 2px solid #e68a00;
+            border-radius: 10px;
+            padding: 15px;
+            width: 30%;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .skill-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Hobby Section (different background color) */
+        .hobbies {
+            background-color: #dff8df;
+            padding: 40px 60px;
+        }
+
+        .hobby-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .hobby-photo {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            width: 280px;
+            text-align: center;
+        }
+
+        .hobby-photo img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .hobby-photo p {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+        }
+
+        footer {
+            background-color: #2e3b36;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .info {
+                max-width: 100%;
+            }
+
+            .box, .edu-photo, .hobby-photo {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HI THERE! I'M GLAD YOU STOPPED BY TO KNOW A BIT ABOUT ME </h1>
+        <p>HELLO, I'M NUR FARHAH SYAFINAZ BINTI MUHAMMAD ALFFIE SYAFIE</p>
+    </header>
+
+    <nav>
+        <a href="about.html">About Me</a>
+        <a href="family.html">Family</a>
+	<a href="friend.html">Friend</a>
+        <a href="collection.html">Collection</a>
+     
+    </nav>
+
+    <!-- About Me -->
+    <section id="about" class="about">
+        <div class="info">
+            <h2>About Me</h2>
+            <p>Hello everyone! I'm Farhah, a person who always says "don't waste money" but somehow ends up broke at the start of every month. I'm a gamer at heart, and you'll often find me playing Valorant, PUBG, Mobile Legends, FIFA, and almost every game out there. You could say I play like a professional (well, almost!). Currently, I'm a student at UiTM Sarawak, pursuing a Diploma in Information Management. This is my personal website, feel free to explore and get to know me better!</strong>. I am passionate about design, technology, and creative projects. This website is part of my HTML assignment, which I created using Notepad and the W3Schools guide.</p>
+
+            <p><strong>Birthday:</strong> 18th July 2005</p>
+	    <p><strong>Birth Place:</strong> Hospital Kota Bharu Kelantan</p>
+	    <p><strong>Race:</strong> Melayu Dusun</p>
+            <p><strong>Nationality:</strong> Malaysian</p>
+	    <p><strong>Current Status:</strong> Student at University Teknologi Mara Kampus Samarahan, Sarawak</p>
+	    
+        </div>
+        <img src="Gambar Passport.jpg" alt="My Photo">
+    </section>
+
+<section class="favorites">
+  <h2>My Favorites</h2>
+  <div class="fav-container">
+    <!-- Favorite Color -->
+    <div class="fav-column">
+      <h3>My Favorite Color 🎨</h3>
+      <div class="fav-item">
+        <img src="black.jpg" alt="Favorite Color 1">
+        <p>I love black color because it is suitable for all colors.</p>
+      </div>
+      <div class="fav-item">
+        <img src="green.jpg" alt="Favorite Color 2">
+        <p>Dark green reminds me of nature and trees.</p>
+      </div>
+    </div>
+
+ <!-- Favorite Music -->
+    <div class="fav-column">
+      <h3>My Favorite Music 🎵</h3>
+      <div class="fav-item">
+        <img src="no.jpg" alt="Favorite Place 1">
+        <p>No Blueberries by DPR IAN, this is my favorite singer.</p>
+      </div>
+      <div class="fav-item">
+        <img src="manchild.jpg" alt="Favorite Place 2">
+        <p>Manchild by Sabrina Carpenter</p>
+      </div>
+    </div>
+
+
+    <!-- Favorite Place -->
+    <div class="fav-column">
+      <h3>My Favorite Place 🌴</h3>
+      <div class="fav-item">
+        <img src="switzerland.jpg" alt="Favorite Place 1">
+        <p>Switzerland, best for place for skiing, snowboarding, hiking, and stunning panoramic views.</p>
+      </div>
+      <div class="fav-item">
+        <img src="japan.jpg" alt="Favorite Place 2">
+        <p>Japanese people take excellent care of their things, so most thrifted clothes look almost new.</p>
+      </div>
+    </div>
+
+    <!-- Favorite Pet -->
+    <div class="fav-column">
+      <h3>My Favorite Pet 🐾</h3>
+      <div class="fav-item">
+        <img src="udin.jpg" alt="Pet 1">
+        <p>This is my guinea pig, Udin. He’s playful and sweet.</p>
+      </div>
+      <div class="fav-item">
+        <img src="cepet.jpg" alt="Pet 2">
+        <p>This is my cat, Cepet. He loves cuddles!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Education Section -->
+<center>
+    <section id="education">
+        <h2>Education</h2>
+<center>
+        <p> After I finished my Sijil Pelajaran Malaysia (SPM) I got an 8A 1B and now I'm currently studying at University Teknologi Mara. I studied a Diploma in Information Management. This diploma is about libraries, records, archives, coding, and computers. It's not that hard to study this course if you like being in the library or know about records. So far I'm rating this diploma 8/10 because this is not my top 1 pick. Here are some memorable moments from my education journey:</p>
+        <div class="education-gallery">
+
+            <div class="edu-photo">
+                <img src="highschool.jpg" alt="School Photo 1">
+                <p>My high school days were full of unforgettable experiences.</p>
+            </div>
+
+            <div class="edu-photo">
+                <img src="work.jpg" alt="School Photo 2">
+                <p>During my diploma studies at UiTM, I learned a lot about teamwork and discipline.</p>
+            </div>
+
+            <div class="edu-photo">
+                <img src="present.jpg" alt="School Photo 3">
+                <p>One of my proudest moments: presenting my individual project during college week.</p>
+            </div>
+<div class="edu-photo">
+                <img src="sem2.jpg" alt="School Photo 3">
+                <p>Semester 2, learn about system unit.</p>
+            </div>
+<div class="edu-photo">
+                <img src="class.jpg" alt="School Photo 3">
+                <p>My online class during Ramadhan.</p>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+<p>I'm good at editing using Canva. Currently, I hold the position of Multimedia in the Komander Kesatria co-curriculum, so I already know how to use Canva and because I am studying this course, I also know how to use HTML, C++, and other coding applications.</p>
+
+        <div class="skill-boxes">
+            <div class="box">HTML</div>
+            <div class="box">CSS</div>
+            <div class="box">Microsoft Office</div>
+            <div class="box">Canva Design</div>
+            <div class="box">Communication</div>
+            <div class="box">Teamwork</div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="hobbies">
+        <h2>My Hobbies</h2>
+        <p>Here are some of my favorite activities that help me relax and stay creative:</p>
+        <div class="hobby-gallery">
+            <div class="hobby-photo">
+                <img src="book3.jpg" alt="Hobby 1">
+                <p>I love reading books during my free time.</p>
+            </div>
+
+            <div class="hobby-photo">
+                <img src="val.jpg" alt="Hobby 2">
+                <p>I play a lot of video games</p>
+            </div>
+
+            <div class="hobby-photo">
+                <img src="hike2.jpg" alt="Hobby 3">
+                <p>Spending time outdoors, especially hiking.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+            <p><strong>Email:</strong> farhahsyafinaz63@gmail.com</p>
+            <p><strong>Instagram:</strong> @syafzlovesdheo</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Nur Farhah. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
